@@ -9,6 +9,7 @@ import Vision from './5Vision';
 import Faq from './6Faq';
 import Review from './7Review';
 import Focus from './8Focus';
+import Guide from './9Guide';
 
 const Container = styled.div`
   width: 100%;
@@ -27,6 +28,7 @@ function Landing() {
       <Faq />
       <Review />
       <Focus />
+      <Guide />
     </Container>
   );
 }
