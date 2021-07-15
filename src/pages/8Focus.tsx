@@ -50,7 +50,7 @@ function Focus() {
         <Subject main={reviewEng.main} />
         <Container>
           {reviewEng.details.map((content, index) => (
-            <Main>
+            <Main key={index}>
               <Icon>
                 <i className={content.icon} />
               </Icon>

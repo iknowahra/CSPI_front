@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 
@@ -42,15 +42,13 @@ const SliderSlap = styled.div`
 `;
 
 function Review() {
-  const sliderRef = useRef(null);
-  console.log(sliderRef);
   return (
     <Wrapper>
       <Inner>
         <Subject main={reviewEng.main} sub={reviewEng.sub.toUpperCase()} />
         <h3>{reviewEng.subTitle}</h3>
         <SliderWrapper>
-          <Slider dots ref={sliderRef}>
+          <Slider dots>
             {reviewEng.contents.map((content, index) => (
               <SliderSlap key={index}>
                 <p>{content.details}</p>
