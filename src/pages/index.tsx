@@ -10,6 +10,7 @@ import Faq from './6Faq';
 import Review from './7Review';
 import Focus from './8Focus';
 import Guide from './9Guide';
+import News from './10News';
 
 const Container = styled.div`
   width: 100%;
@@ -29,6 +30,7 @@ function Landing() {
       <Review />
       <Focus />
       <Guide />
+      <News />
     </Container>
   );
 }
