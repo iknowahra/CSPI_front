@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 1px 0px;
     font-size: 0.85rem;
     line-height: 1.6rem;
-    white-space: pre-wrap 
+    white-space: pre-line;
   }
   
   /* Default CSS */
@@ -52,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     background-color: #fff;
     color: #333;
+    word-break: keep-all;
   }
 `;
 

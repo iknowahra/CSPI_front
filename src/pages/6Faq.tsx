@@ -111,6 +111,12 @@ const AwardButton = styled.button`
   color: ${({ theme }) => theme.color.charcoal};
   text-transform: uppercase;
   background-color: white;
+
+  :hover {
+    background-color: ${({ theme }) => theme.color.main};
+    color: white;
+    border: transparent;
+  }
 `;
 
 function Fnq() {

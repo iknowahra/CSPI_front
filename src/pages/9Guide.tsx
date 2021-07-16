@@ -31,22 +31,24 @@ const Left = styled.div`
   width: 40%;
   position: relative;
   > img {
-    height: 100%;
+    width: 250px;
   }
 `;
 
 const SliderWrapper = styled.div`
   position: absolute;
-  top: 2.8rem;
-  left: 1.2rem;
-  width: 70%;
-  height: 26rem;
-  border-radius: 0.5rem;
+  top: 2.3rem;
+  left: 1rem;
+  width: 13.7rem;
+  height: 28.2rem;
+  border-radius: 0.3rem;
   overflow: hidden;
   img {
     width: 100%;
-    height: 26rem;
-    object-fit: cover;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    display: block;
   }
 `;
 
