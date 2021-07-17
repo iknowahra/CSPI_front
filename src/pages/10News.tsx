@@ -16,8 +16,9 @@ interface BadgeProps {
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 110vh;
-  margin-bottom: 2rem;
+  height: 120vh;
+  padding-bottom: 2rem;
+  background-color: ${({ theme }) => theme.color.lightGrey};
 `;
 
 const Inner = styled.div`
@@ -129,7 +130,7 @@ const RightImage = styled.div`
   > img {
     width: 100%;
     height: 100%;
-
+    object-fit: cover;
     transition: 0.5s;
     &:hover {
       transform: scale(1.1);
@@ -156,6 +157,7 @@ const ReadMore = styled.button`
   border-radius: 0.2rem;
   color: ${({ theme }) => theme.color.charcoal};
   border: ${({ theme }) => theme.boxBorder};
+
   :hover {
     background-color: ${({ theme }) => theme.color.charcoal};
     color: white;
@@ -166,7 +168,7 @@ const ReadMore = styled.button`
 function News() {
   const newsPhotos = [newsSmall1, newsSmall2, newsSmall3, newsSmall4];
   return (
-    <Wrapper>
+    <Wrapper id="menu7">
       <Inner>
         <Subject main={newsEng.subject} />
         <Main>
@@ -180,7 +182,7 @@ function News() {
           </Left>
           <Right>
             {newsEng.subNews.map((news, index) => (
-              <RightInner>
+              <RightInner key={index}>
                 <RightImage>
                   <img src={newsPhotos[index]} alt={news.title} />
                   {news.badge && (

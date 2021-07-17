@@ -10,7 +10,6 @@ import Eng from '../assets/eng/1landing';
 
 const Container = styled.div`
   width: inherit;
-  padding: 3rem 0 0 0;
   height: 100vh;
 `;
 
@@ -19,14 +18,13 @@ const Inner = styled.div`
 `;
 
 const SliderWrapper = styled.div`
-  width: 100%;
-  height: auto;
+  height: 100vh;
 `;
 
 const Intro = styled.div`
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 3rem;
   transform: translateY(-50%);
 `;

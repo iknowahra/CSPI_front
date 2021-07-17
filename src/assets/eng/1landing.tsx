@@ -22,19 +22,15 @@ const welcomeEng = {
     location: '362/19 Ung van khiem street, Phuong 25, HCM, Vietnam',
   },
   footer: {
-    Kor: {
-      name: 'Head Quarter',
-      location: '06752 서울특별시 서초구 바우뫼로 27길 7-31 예원빌딩 6,9,10층',
-      telephone: 'T. +84-2-3460-8800',
-      fax: 'F. +84-2-3460-8899',
-    },
-    Vn: {
-      name: 'Vietnam Branch',
-      location:
-        '362/19 Ung van Khiem Street, Ward 25, District Binh Thanh, HCM, Vietnam',
-      telephone: 'T. +84-28-3460-8800',
-      fax: 'F. +84-28-3460-8899',
-    },
+    policy1: '개인정보취급방침 | ',
+    policy2: '이용약관',
+    copyright: 'Copyright CSPI Vietnam. All right reserved.',
+    basic:
+      'CSPI Vietnam Co., Ltd. | Representative: Shin Changho | MST : 0314199403',
+    location:
+      'Address : 362/19 Ung van Khiem Street, Ward 25, District Binh Thanh, HCM, Vietnam',
+    contacts: 'T. +84-28-3460-8800 | F. +84-28-3460-8899  ',
+    email: 'E. helen@cspi.co.kr',
   },
 };
 

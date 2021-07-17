@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 import Subject from '../components/Subject';
 import productsEng from '../assets/eng/4products';
-import photo from '../assets/feature.png';
+import photo1 from '../assets/feature1.png';
+import photo2 from '../assets/feature2.png';
+import photo3 from '../assets/feature3.png';
 
 interface NumberProps {
   number: string;
@@ -25,10 +27,10 @@ const Wrapper = styled.div<NumberProps>`
   flex-direction: ${({ number }) =>
     !!(Number(number) % 2) ? 'row' : 'row-reverse'};
   justify-content: center;
-  margin: 4.5rem 0;
+  margin-bottom: 9rem;
 `;
 
-const ImgWrapper = styled.div`
+const Left = styled.div`
   width: 50%;
   display: flex;
   justify-content: center;
@@ -41,7 +43,7 @@ const ImgWrapper = styled.div`
   }
 `;
 
-const Contents = styled.div<NumberProps>`
+const Right = styled.div<NumberProps>`
   display: flex;
   width: 50%;
   flex-direction: column;
@@ -61,45 +63,42 @@ const Contents = styled.div<NumberProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
   }
 `;
 
 function Products() {
+  const photos = [photo1, photo2, photo3];
+
   return (
     <Container>
       <Inner>
-        <Subject
-          main={productsEng.subject1.main}
-          sub={productsEng.subject1.sub}
-        />
-        <Wrapper number={'1'}>
-          <ImgWrapper>
-            <img src={photo} alt="feature01" />
-          </ImgWrapper>
-          <Contents number={'1'}>
-            <h3>{productsEng.subject1.contents.feature01[0]}</h3>
-            <p>{productsEng.subject1.contents.feature01[1]}</p>
-          </Contents>
-        </Wrapper>
-        <Wrapper number={'2'}>
-          <ImgWrapper>
-            <img src={photo} alt="feature02" />
-          </ImgWrapper>
-          <Contents number={'2'}>
-            <h3>{productsEng.subject1.contents.feature02[0]}</h3>
-            <p>{productsEng.subject1.contents.feature02[1]}</p>
-          </Contents>
-        </Wrapper>
-        <Wrapper number={'3'}>
-          <ImgWrapper>
-            <img src={photo} alt="feature03" />
-          </ImgWrapper>
-          <Contents number={'3'}>
-            <h3>{productsEng.subject1.contents.feature03[0]}</h3>
-            <p>{productsEng.subject1.contents.feature03[1]}</p>
-          </Contents>
-        </Wrapper>
+        <Subject main={productsEng.main} sub={productsEng.sub} />
+        {productsEng.contents.map((product, index) => (
+          <Wrapper key={index} number={`${index + 1}`}>
+            <Left
+              className="aos-animate"
+              data-aos={!!((index + 1) % 2) ? 'fade-right' : 'fade-left'}
+            >
+              <img
+                src={photos[index]}
+                alt={`${'product' + Number(index + 1)}`}
+              />
+            </Left>
+            <Right
+              number={`${index + 1}`}
+              className="aos-animate"
+              data-aos={!!((index + 1) % 2) ? 'fade-left' : 'fade-right'}
+            >
+              <h3>{product.title}</h3>
+              <p>{product.details}</p>
+            </Right>
+          </Wrapper>
+        ))}
       </Inner>
     </Container>
   );

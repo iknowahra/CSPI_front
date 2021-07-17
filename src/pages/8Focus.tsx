@@ -6,6 +6,7 @@ import reviewEng from '../assets/eng/8focus';
 
 const Wrapper = styled.div`
   width: 100%;
+  padding: 3rem 0;
 `;
 
 const Inner = styled.div`
@@ -45,13 +46,18 @@ const Details = styled.p`
 
 function Focus() {
   return (
-    <Wrapper>
+    <Wrapper id="menu5">
       <Inner>
         <Subject main={reviewEng.main} />
         <Container>
           {reviewEng.details.map((content, index) => (
             <Main key={index}>
-              <Icon>
+              <Icon
+                className="aos-animate"
+                data-aos="flip-up"
+                data-aos-duration="1000"
+                data-aos-delay={'' + Number(500 * index)}
+              >
                 <i className={content.icon} />
               </Icon>
               <Title>{content.title}</Title>

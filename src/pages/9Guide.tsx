@@ -15,7 +15,8 @@ import appScreen5 from '../assets/app-screen-05.png';
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  padding-top: 3rem;
 `;
 
 const Inner = styled.div`
@@ -118,13 +119,10 @@ function Guide() {
 
   const handleModal = (open: boolean) => {
     setOpen(open);
-    console.log('dd', open);
   };
 
-  console.log('guide', isOpen);
-
   return (
-    <Wrapper>
+    <Wrapper id="menu6">
       <Inner>
         <Left>
           <img src={mockup} alt="mockup" />

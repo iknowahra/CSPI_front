@@ -7,13 +7,14 @@ import reviewEng from '../assets/eng/7review';
 
 const Wrapper = styled.div`
   width: 100%;
+  height: 75vh;
   background-color: ${({ theme }) => theme.color.lightGrey};
 `;
 
 const Inner = styled.div`
   width: 80%;
   margin: auto;
-  padding-bottom: 4rem;
+  padding: 3rem 0;
   > h3 {
     text-align: center;
     margin: -1rem 0 1rem 0;
@@ -43,7 +44,7 @@ const SliderSlap = styled.div`
 
 function Review() {
   return (
-    <Wrapper>
+    <Wrapper id="menu4">
       <Inner>
         <Subject main={reviewEng.main} sub={reviewEng.sub.toUpperCase()} />
         <h3>{reviewEng.subTitle}</h3>

@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import visionEng from '../assets/eng/5vision';
-import photo from '../assets/vision.jpg';
+import photo1 from '../assets/vision1.jpg';
+import photo2 from '../assets/vision2.jpg';
+import photo3 from '../assets/vision3.jpg';
 
 interface HeaderProps {
   main: string;
@@ -13,8 +15,9 @@ interface ContentsProps {
 
 const Container = styled.div`
   width: 100%;
-  height: 65vh;
+  height: 80vh;
   margin: auto;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
 `;
@@ -70,9 +73,9 @@ function Header({ main, sub }: HeaderProps) {
 }
 
 function Vision() {
-  const photos: string[] = [photo, photo, photo];
+  const photos: string[] = [photo1, photo2, photo3];
   return (
-    <Container>
+    <Container id="menu2">
       <Inner>
         {visionEng.map((vision, index) => (
           <Contents key={index} index={index}>

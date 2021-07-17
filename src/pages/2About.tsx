@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ceoPhoto from '../assets/vision.jpg';
+import ceoPhoto from '../assets/vision1.jpg';
 import accessPhoto from '../assets/access.png';
 import aboutEng from '../assets/eng/2about';
+import googleBadge from '../assets/google.svg';
+import appBadge from '../assets/appstore.svg';
 
 const Container = styled.div`
   width: 100%;
   display: flex;
-  height: 90vh;
+  height: 100vh;
   flex-direction: column;
 `;
 
@@ -16,6 +18,7 @@ const Inner = styled.div`
   width: 80%;
   height: 100%;
   margin: auto;
+  padding-top: 3.5rem;
   h1,
   h3 {
     margin-bottom: 0.8rem;
@@ -76,14 +79,24 @@ const AccessLeft = styled.div`
   width: 57%;
   height: 100%;
   display: flex;
-  align-items: center;
-  padding-right: 2rem;
-`;
-
-const AccessLeftWrapper = styled.div`
-  white-space: pre-wrap;
-  p {
-    width: 85%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+  > div {
+    margin-bottom: 1rem;
+    width: 70%;
+    font-size: 1.5rem;
+  }
+  > p {
+    margin-bottom: 2.5rem;
+  }
+  > span {
+    display: flex;
+    cursor: pointer;
+    img {
+      width: 8rem;
+      margin-right: 1rem;
+    }
   }
 `;
 
@@ -91,21 +104,17 @@ const AccessRight = styled.div`
   width: 43%;
   height: 100%;
   display: flex;
-  align-items: center;
-  position: relative;
+  align-items: flex-end;
 
   > img {
-    max-width: 100%;
+    max-width: 80%;
     width: 30rem;
-    position: absolute;
-    bottom: 0;
-    right: 0;
   }
 `;
 
 function About() {
   return (
-    <Container>
+    <Container id="menu1">
       <Inner>
         <CEO>
           <CeoLeft>
@@ -127,10 +136,12 @@ function About() {
         </CEO>
         <Access>
           <AccessLeft>
-            <AccessLeftWrapper>
-              <h3>{aboutEng.access.title}</h3>
-              <p>{aboutEng.access.details}</p>
-            </AccessLeftWrapper>
+            <div>{aboutEng.access.title}</div>
+            <p>{aboutEng.access.details}</p>
+            <span>
+              <img src={googleBadge} alt="" />
+              <img src={appBadge} alt="" />
+            </span>
           </AccessLeft>
           <AccessRight>
             <img src={accessPhoto} alt="access" />

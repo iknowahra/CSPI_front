@@ -10,7 +10,7 @@ interface TabProps {
 }
 
 const Wrapper = styled.div`
-  height: 27vh;
+  height: 28vh;
   background-color: ${({ theme }) => theme.color.main};
 `;
 
@@ -84,6 +84,7 @@ const Right = styled.div`
 const RightInner = styled.div<TabProps>`
   display: ${({ no, selected }) => (no === selected ? 'show' : 'none')};
   color: ${({ theme }) => theme.color.lightGrey};
+  width: 80%;
   p {
     font-size: 0.9rem;
     line-height: 1.6rem;
