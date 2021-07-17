@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
 import logo from '../assets/logo.png';
-const Container = styled.div`
+
+interface Props {
+  isScroll: boolean;
+}
+
+const Container = styled.div<Props>`
   position: fixed;
   width: 100%;
   z-index: 10;
-  background-color: white;
-  box-shadow: 0 1px 2px ${({ theme }) => theme.color.lightGrey};
+  ${({ isScroll, theme }) =>
+    isScroll
+      ? `background-color: white;
+         box-shadow: 0 1px 2px ${theme.color.lightGrey}`
+      : ''};
 `;
 
 const Wrapper = styled.div`
@@ -31,26 +37,38 @@ const Categories = styled.div`
   justify-content: flex-end;
 `;
 
-const Menu = styled(Link)`
+const Menu = styled.a`
   margin: 0 0.4rem;
   font-size: 0.8rem;
+  color: ${({ theme }) => theme.color.charcoal};
 `;
 
 function Header() {
   const menues = [
-    { name: 'Home', link: '' },
-    { name: 'Introduction', link: 'intro' },
-    { name: 'Products', link: 'products' },
-    { name: 'Inquery', link: 'inquery' },
+    { name: 'About' },
+    { name: 'Vision' },
+    { name: 'F&Q' },
+    { name: 'Review' },
+    { name: 'Focus' },
+    { name: 'Guide' },
+    { name: 'Latest News' },
   ];
 
+  const [isScroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      window.scrollY === 0 ? setScroll(false) : setScroll(true);
+    });
+  }, []);
+
   return (
-    <Container>
+    <Container isScroll={isScroll}>
       <Wrapper>
         <img src={logo} alt="CSPI logo" />
         <Categories>
-          {menues.map((menu) => (
-            <Menu key={menu.name} to={`/${menu.link}`}>
+          {menues.map((menu, index) => (
+            <Menu key={menu.name} href={`#menu${index + 1}`}>
               {menu.name}
             </Menu>
           ))}

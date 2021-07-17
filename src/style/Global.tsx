@@ -5,7 +5,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'NEXON Lv2 Gothic', sans-serif;
   }
-  
+  html{
+    scroll-behavior: smooth;
+  }
+
   a {
     text-decoration: none;
     cursor: pointer;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import BtnScrollUp from '../components/BtnScrollUp';
 import About from './2About';
 import Welcome from './1Welcome';
 import Service from './3Service';
@@ -21,6 +22,7 @@ const Container = styled.div`
 function Landing() {
   return (
     <Container>
+      <BtnScrollUp />
       <Welcome />
       <About />
       <Service />
