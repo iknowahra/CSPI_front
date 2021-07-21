@@ -1,9 +1,16 @@
 const welcomeEng = {
   slogan: {
-    main: 'The Way Forward',
-    sub: '끊임없는 혁신과 기술개발로 고객의 성공과 함께하는',
-    detail:
-      '고객 비즈니스 혁신을 위한 차별화된 IT 솔루션과 서비스를 제공합니다.',
+    sub: '창의적인 아이디어를 만드는 가장 빠른 방법',
+    main: 'An idea solution of startup\nfor your',
+    mainType: [
+      'Business strategy',
+      'Organization Management',
+      'Business Innovation',
+    ],
+    details:
+      '스타트업 메이트 앱이 여러분의 최상의 스타트업 구축을 위해\n창의적인 아이디어를 제공하는 데 최선을 다하겠습니다.',
+    button1: 'CEO 시작하기',
+    button2: '사용자 가이드',
   },
   aboutLeft: {
     header: '끊임없는 혁신과 기술개발로 고객의 성공과 함께하는',

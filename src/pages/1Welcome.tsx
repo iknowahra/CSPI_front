@@ -27,12 +27,36 @@ const Intro = styled.div`
   top: 45%;
   left: 3rem;
   transform: translateY(-50%);
+  width: 50%;
 `;
 
 const MainSlogan = styled.h1`
   font-weight: 600;
+  white-space: pre-line;
+  line-height: 2.8rem;
+  color: ${({ theme }) => theme.color.sub};
+`;
+
+const TypeSlogan = styled.h1`
+  font-weight: 600;
   color: ${({ theme }) => theme.color.main};
-  margin: 1rem 0 2rem 0;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+`;
+
+const Button = styled.button`
+  border: ${({ theme }) => theme.boxBorder};
+  border-radius: 0.3rem;
+  padding: 0.6rem 1.3rem;
+  margin: 1rem;
+  background-color: transparent;
+  color: ${({ theme }) => theme.color.main};
+  border: 1px solid ${({ theme }) => theme.color.main};
+  &.guide {
+    background-color: ${({ theme }) => theme.color.main};
+    color: white;
+    border: transparent;
+  }
 `;
 
 function Welcome() {
@@ -42,26 +66,30 @@ function Welcome() {
     dots: false,
     infinite: true,
     fade: true,
-    speed: 1000,
     autoplay: true,
     autoplaySpeed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
   };
   return (
     <Container>
       <Inner>
         <SliderWrapper>
-          <Slider {...settings}>
+          <Slider speed={1000} {...settings}>
             {photos.map((photo, index) => (
               <img key={index} src={photo} alt="" />
             ))}
           </Slider>
         </SliderWrapper>
         <Intro>
-          <h3>{Eng.slogan.sub}</h3>
+          <p>{Eng.slogan.sub}</p>
           <MainSlogan>{Eng.slogan.main}</MainSlogan>
-          <p>{Eng.slogan.detail}</p>
+          <Slider speed={500} {...settings}>
+            {Eng.slogan.mainType.map((type, index) => (
+              <TypeSlogan key={index}>{type}</TypeSlogan>
+            ))}
+          </Slider>
+          <p>{Eng.slogan.details}</p>
+          <Button>{Eng.slogan.button1}</Button>
+          <Button className="guide">{Eng.slogan.button2}</Button>
         </Intro>
       </Inner>
     </Container>
