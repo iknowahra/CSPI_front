@@ -9,8 +9,26 @@ import photo3 from '../assets/slide-welcome-03.png';
 import Eng from '../assets/eng/1landing';
 
 const Container = styled.div`
-  width: inherit;
+  width: 100vw;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    background-color: ${({ theme }) => theme.color.lightGrey};
+
+    h1 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
+    div,
+    span,
+    p,
+    button {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+  }
 `;
 
 const Inner = styled.div`
@@ -19,6 +37,10 @@ const Inner = styled.div`
 
 const SliderWrapper = styled.div`
   height: 100vh;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Intro = styled.div`
@@ -28,6 +50,12 @@ const Intro = styled.div`
   left: 3rem;
   transform: translateY(-50%);
   width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    top: 23rem;
+    left: 0;
+  }
 `;
 
 const MainSlogan = styled.h1`
@@ -44,6 +72,15 @@ const TypeSlogan = styled.h1`
   margin-bottom: 1rem;
 `;
 
+const Details = styled.p`
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: auto;
+    white-space: normal;
+    margin-top: 2rem;
+  }
+`;
+
 const Button = styled.button`
   border: ${({ theme }) => theme.boxBorder};
   border-radius: 0.3rem;
@@ -56,6 +93,11 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.color.main};
     color: white;
     border: transparent;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem 1.2rem;
+    margin-top: 6rem;
   }
 `;
 
@@ -87,7 +129,7 @@ function Welcome() {
               <TypeSlogan key={index}>{type}</TypeSlogan>
             ))}
           </Slider>
-          <p>{Eng.slogan.details}</p>
+          <Details>{Eng.slogan.details}</Details>
           <Button>{Eng.slogan.button1}</Button>
           <Button className="guide">{Eng.slogan.button2}</Button>
         </Intro>

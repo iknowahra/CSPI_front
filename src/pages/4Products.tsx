@@ -28,6 +28,22 @@ const Wrapper = styled.div<NumberProps>`
     !!(Number(number) % 2) ? 'row' : 'row-reverse'};
   justify-content: center;
   margin-bottom: 9rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    margin-bottom: 3rem;
+
+    h3 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+  }
 `;
 
 const Left = styled.div`
@@ -40,6 +56,16 @@ const Left = styled.div`
     height: inherit;
     margin: auto;
     object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+    }
   }
 `;
 
@@ -68,6 +94,15 @@ const Right = styled.div<NumberProps>`
 
   h3 {
     margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 1rem 0 2rem 0;
+
+    &::before {
+      margin-bottom: 1rem;
+    }
   }
 `;
 

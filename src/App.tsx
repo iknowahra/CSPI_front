@@ -13,12 +13,15 @@ const Wrapper = styled.div`
   width: 100%;
   margin: auto;
   position: relative;
+  @media (max-width: 768px) {
+    overflow-x: hidden;
+  }
 `;
 
 function App() {
   useEffect(() => {
     AOS.init({
-      delay: 100,
+      delay: 50,
       offset: 80,
       duration: 2000,
       animatedClassName: 'aos-animate',

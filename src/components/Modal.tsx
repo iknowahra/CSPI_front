@@ -39,6 +39,15 @@ const Inner = styled.div`
     width: 800px;
     height: 450px;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    iframe {
+      width: 100%;
+      height: 50%;
+    }
+  }
 `;
 
 const Title = styled.h3`

@@ -17,10 +17,18 @@ const Inner = styled.div`
   width: 80%;
   margin: auto;
   padding: 2rem 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Container = styled.div`
   display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Contents = styled.div`
@@ -29,9 +37,21 @@ const Contents = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  :nth-child(1) {
+
+  :first-child {
     margin-right: 1rem;
     width: 55%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: auto;
+    min-height: 65vh;
+    :first-child {
+      width: 90%;
+      margin: auto;
+      min-height: 80vh;
+    }
   }
 `;
 
@@ -54,11 +74,20 @@ const Title = styled.div<AcordianProps>`
     content: ' ${({ no, selected }) => (no === selected ? '\f105' : '\f107')}';
     float: right;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const Details = styled.p<AcordianProps>`
   margin-top: 1rem;
   display: ${({ no, selected }) => (no === selected ? 'show' : 'none')};
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+  }
 `;
 
 const AwardImage = styled.div`
@@ -102,6 +131,11 @@ const AwardDetails = styled.p`
   margin-bottom: 1.5rem;
   width: 25rem;
   max-width: 100%;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+  }
 `;
 
 const AwardButton = styled.button`

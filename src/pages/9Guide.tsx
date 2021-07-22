@@ -17,6 +17,11 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   padding-top: 3rem;
+
+  @media (max-width: 768px) {
+    height: 200vh;
+    padding-top: 2rem;
+  }
 `;
 
 const Inner = styled.div`
@@ -26,13 +31,33 @@ const Inner = styled.div`
   padding: 4rem 0;
   display: flex;
   border-top: ${({ theme }) => theme.boxBorder};
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const Left = styled.div`
   width: 40%;
   position: relative;
+
   > img {
     width: 250px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    > img {
+      width: auto;
+      height: 85vh;
+      margin: auto;
+    }
   }
 `;
 
@@ -44,12 +69,25 @@ const SliderWrapper = styled.div`
   height: 28.2rem;
   border-radius: 0.3rem;
   overflow: hidden;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: fill;
     object-position: center;
     display: block;
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    width: 17rem;
+    height: 35rem;
+    top: 3.2rem;
+    left: 5rem;
+
+    img {
+      height: 35rem;
+    }
   }
 `;
 
@@ -58,6 +96,14 @@ const Right = styled.div`
   height: 100%;
   padding-left: 3rem;
   margin: auto;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 0;
+  }
 `;
 
 const Title = styled.div`
@@ -84,12 +130,22 @@ const TextInner = styled.div`
     opacity: 0.8;
     margin-right: 0.5rem;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    flex-direction: column;
+
+    > i {
+      font-size: 3.5rem;
+    }
+  }
 `;
 
 const ImageInner = styled.div`
   position: relative;
   height: 60%;
   cursor: pointer;
+
   > i {
     color: white;
     font-size: 3.5rem;
@@ -99,11 +155,18 @@ const ImageInner = styled.div`
     left: 45%;
     transform: translate(-50% -50%);
   }
+
   > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    > img {
+      height: 95%;
+    }
   }
 `;
 
@@ -127,7 +190,7 @@ function Guide() {
         <Left>
           <img src={mockup} alt="mockup" />
           <SliderWrapper>
-            <Slider dots arrows={false} autoplay>
+            <Slider arrows={false} autoplay>
               {sliderPhotos.map((photo, index) => (
                 <img src={photo} key={index} alt={'mockup' + index} />
               ))}

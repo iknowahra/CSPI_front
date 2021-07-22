@@ -57,6 +57,14 @@ const GlobalStyle = createGlobalStyle`
     color: #333;
     word-break: keep-all;
   }
+
+  /* mobile*/
+
+  @media (max-width: 768px) {
+   html{
+     font-size: 14px;
+    } 
+  }
 `;
 
 export default GlobalStyle;

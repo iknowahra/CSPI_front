@@ -19,6 +19,12 @@ const Wrapper = styled.div`
   height: 120vh;
   padding-bottom: 2rem;
   background-color: ${({ theme }) => theme.color.lightGrey};
+
+  @media (max-width: 768px) {
+    padding: 0rem;
+    width: 100%;
+    height: 300vh;
+  }
 `;
 
 const Inner = styled.div`
@@ -33,6 +39,14 @@ const Inner = styled.div`
 
 const Main = styled.div`
   display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    div {
+      font-size: 1.1rem;
+    }
+  }
 `;
 
 const Left = styled.div`
@@ -65,12 +79,24 @@ const Left = styled.div`
     display: block;
     object-fit: cover;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 65vh;
+    margin-bottom: 2rem;
+  }
 `;
 
 const Right = styled.div`
   width: 50%;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 `;
 
 const LeftText = styled.div`
@@ -87,6 +113,13 @@ const LeftText = styled.div`
   p {
     margin: 1rem 0;
     font-weight: 300;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 1rem;
+      line-height: 1.9rem;
+    }
   }
 `;
 
@@ -115,11 +148,33 @@ const RightInner = styled.div`
     -webkit-box-orient: vertical;
     margin-top: 0.7rem;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 45vh;
+    margin: 1rem 0;
+
+    &:nth-child(1),
+    :nth-child(2),
+    :nth-child(3) {
+      margin: 0;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+      height: 4rem;
+    }
+  }
 `;
 
 const Date = styled.span`
   font-size: 0.7rem;
   display: block;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const RightImage = styled.div`
@@ -136,6 +191,10 @@ const RightImage = styled.div`
       transform: scale(1.1);
     }
   }
+
+  @media (max-width: 768px) {
+    height: 65%;
+  }
 `;
 
 const Badge = styled.span<BadgeProps>`
@@ -148,6 +207,11 @@ const Badge = styled.span<BadgeProps>`
   border-radius: 0.3rem;
   background-color: ${({ content, theme }) =>
     content === 'new' ? theme.color.charcoal : theme.color.main};
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.1rem 0.7rem;
+  }
 `;
 
 const ReadMore = styled.button`
@@ -191,7 +255,8 @@ function News() {
                     </Badge>
                   )}
                 </RightImage>
-                <div>{news.title}</div>
+
+                <div className="title">{news.title}</div>
                 <Date>{news.date}</Date>
               </RightInner>
             ))}

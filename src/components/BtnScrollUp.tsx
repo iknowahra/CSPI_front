@@ -10,6 +10,10 @@ const Wrapper = styled.a`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    bottom: 1.5rem;
+  }
 `;
 
 const Button = styled.span`
@@ -32,6 +36,11 @@ const Button = styled.span`
     i {
       color: ${({ theme }) => theme.color.sub};
     }
+  }
+
+  @media (max-width: 768px) {
+    width: 1.7rem;
+    height: 1.7rem;
   }
 `;
 

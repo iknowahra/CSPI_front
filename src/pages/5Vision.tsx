@@ -20,6 +20,10 @@ const Container = styled.div`
   padding-top: 3rem;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    height: auto;
+  }
 `;
 
 const Inner = styled.div`
@@ -27,6 +31,10 @@ const Inner = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${({ theme }) => theme.color.lightGrey};
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Contents = styled.div<ContentsProps>`
@@ -38,8 +46,15 @@ const Contents = styled.div<ContentsProps>`
     width: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+  }
 `;
-const Wrapper = styled.div`
+
+const HeaderWrapper = styled.div`
   height: 50%;
   width: 65%;
   display: flex;
@@ -61,14 +76,29 @@ const Wrapper = styled.div`
       left: 0;
     }
   }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    height: 100%;
+    padding: 3.5rem 0;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+  }
 `;
 
 function Header({ main, sub }: HeaderProps) {
   return (
-    <Wrapper>
+    <HeaderWrapper>
       <h3>{main}</h3>
       <p>{sub}</p>
-    </Wrapper>
+    </HeaderWrapper>
   );
 }
 

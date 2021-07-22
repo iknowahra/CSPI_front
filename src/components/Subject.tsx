@@ -25,10 +25,19 @@ const Main = styled.h2`
     right: 0;
     bottom: 0;
   }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    line-height: 2.4rem;
+  }
 `;
 const Sub = styled.p`
   font-size: 0.9em;
   margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 function Subject({ main, sub }: SubjectProps) {

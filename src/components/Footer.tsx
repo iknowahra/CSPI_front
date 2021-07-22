@@ -11,6 +11,11 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.color.grey};
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    height: 55vh;
+    flex-direction: column;
+  }
 `;
 
 const Inner = styled.div`
@@ -22,11 +27,25 @@ const Inner = styled.div`
   span {
     font-size: 0.8rem;
   }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 90%;
+    div,
+    span {
+      font-size: 1rem;
+    }
+  }
 `;
 
 const Contents = styled.div`
   display: flex;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Logo = styled.div`
@@ -34,10 +53,19 @@ const Logo = styled.div`
   img {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    width: 30%;
+    margin: auto;
+  }
 `;
 const Copyright = styled.div`
   width: 90%;
   margin: 0 2rem;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;
 
 const PolicySns = styled.div`
@@ -46,6 +74,12 @@ const PolicySns = styled.div`
   justify-content: space-between;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid ${({ theme }) => theme.color.sub};
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
 `;
 
 const Policy = styled.div`
@@ -87,6 +121,14 @@ const Sns = styled.div`
       width: 1.2rem;
       height: 1.2rem;
       fill: ${({ theme }) => theme.color.sub};
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    a {
+      margin-left: 0;
+      margin-right: 0.5rem;
     }
   }
 `;

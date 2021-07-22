@@ -12,6 +12,10 @@ interface TabProps {
 const Wrapper = styled.div`
   height: 28vh;
   background-color: ${({ theme }) => theme.color.main};
+
+  @media (max-width: 768px) {
+    height: 55vh;
+  }
 `;
 
 const Inner = styled.div`
@@ -19,6 +23,11 @@ const Inner = styled.div`
   height: 100%;
   margin: auto;
   display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 90%;
+  }
 `;
 
 const Left = styled.div`
@@ -26,7 +35,12 @@ const Left = styled.div`
   flex-direction: row;
   width: 45%;
   height: 100%;
-  padding: 20px 0;
+  padding: 1.2rem 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 50%;
+  }
 `;
 
 const Tab = styled.div<TabProps>`
@@ -58,6 +72,16 @@ const IconWrapper = styled.div<TabProps>`
   :hover {
     transform: translateY(-5px);
   }
+
+  @media (max-width: 768px) {
+    width: 6rem;
+    height: 6rem;
+    font-size: 250%;
+
+    :hover {
+      transform: translateY(0);
+    }
+  }
 `;
 
 const TabLabel = styled.div<TabProps>`
@@ -70,6 +94,11 @@ const TabLabel = styled.div<TabProps>`
   text-align: center;
   line-height: 1.2rem;
   min-height: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
 `;
 
 const Right = styled.div`
@@ -79,6 +108,13 @@ const Right = styled.div`
   margin-left: 3.3rem;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    border-top: ${({ theme }) => theme.boxBorder};
+  }
 `;
 
 const RightInner = styled.div<TabProps>`
@@ -89,6 +125,21 @@ const RightInner = styled.div<TabProps>`
     font-size: 0.9rem;
     line-height: 1.6rem;
     margin-top: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
   }
 `;
 

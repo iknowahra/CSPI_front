@@ -12,6 +12,17 @@ const Container = styled.div`
   display: flex;
   height: 100vh;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    height: 200vh;
+
+    span,
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8rem;
+      white-space: normal;
+    }
+  }
 `;
 
 const Inner = styled.div`
@@ -22,6 +33,10 @@ const Inner = styled.div`
   h1,
   h3 {
     margin-bottom: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 6rem;
   }
 `;
 
@@ -34,6 +49,11 @@ const CEO = styled.div`
   i {
     color: ${({ theme }) => theme.color.main};
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 50%;
+  }
 `;
 
 const CeoLeft = styled.div`
@@ -42,6 +62,16 @@ const CeoLeft = styled.div`
   padding-right: 2rem;
   p {
     width: 90%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-bottom: ${({ theme }) => theme.boxBorder};
+
+    p {
+      width: 100%;
+    }
   }
 `;
 
@@ -53,6 +83,13 @@ const CeoRight = styled.div`
   height: 100%;
   max-height: 100%;
   padding-left: 2rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    margin: 1rem 0;
+  }
 `;
 
 const RightInner = styled.div`
@@ -67,12 +104,26 @@ const RightInner = styled.div`
     object-fit: cover;
     object-position: right;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    > img {
+      width: 100%;
+    }
+  }
 `;
 
 const Access = styled.div`
   height: 60%;
   display: flex;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+  }
 `;
 
 const AccessLeft = styled.div`
@@ -98,6 +149,10 @@ const AccessLeft = styled.div`
       margin-right: 1rem;
     }
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const AccessRight = styled.div`
@@ -109,6 +164,16 @@ const AccessRight = styled.div`
   > img {
     max-width: 80%;
     width: 30rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+
+    > img {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 `;
 

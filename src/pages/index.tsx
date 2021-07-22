@@ -17,6 +17,9 @@ const Container = styled.div`
   width: 100%;
   margin: auto;
   position: relative;
+  @media (max-width: 768px) {
+    overflow-x: hidden;
+  }
 `;
 
 function Landing() {
