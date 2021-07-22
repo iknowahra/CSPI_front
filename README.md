@@ -1,6 +1,9 @@
 # CSPI VIETNAM CO., LTD Official Website
 
+web version
 
-![website_demo](./demo/website_demo.gif)
+<img src="./demo/website_demo.gif" alt="web version" />
 
-![mobile_demo](./demo/mobile_demo.gif style="zoom:50%;")
+mobile version
+
+<img src="./demo/mobile_demo.gif" alt="mobile version" style="zoom:30%;" />
