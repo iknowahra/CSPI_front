@@ -74,7 +74,7 @@ const TypeSlogan = styled.h1`
 
 const Details = styled.p`
   @media (max-width: 768px) {
-    width: 90%;
+    width: 85%;
     margin: auto;
     white-space: normal;
     margin-top: 2rem;

@@ -102,7 +102,7 @@ const RightInner = styled.div`
     max-width: 100%;
     border-radius: 0.2rem;
     object-fit: cover;
-    object-position: right;
+    object-position: right top;
   }
 
   @media (max-width: 768px) {

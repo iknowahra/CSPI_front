@@ -46,6 +46,7 @@ const Button = styled.span`
 
 function BtnScrollUp() {
   const [isScroll, setScroll] = useState(false);
+  
   useEffect(() => {
     window.addEventListener('scroll', () => {
       window.scrollY === 0 ? setScroll(false) : setScroll(true);

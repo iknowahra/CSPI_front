@@ -63,7 +63,7 @@ const Categories = styled.div<ModalProps>`
     height: 100vh;
     width: 55%;
     top: 0;
-    left: ${({ isOpenModal }) => (isOpenModal ? '0' : '-20rem')};
+    left: ${({ isOpenModal }) => (isOpenModal ? '0' : '-50rem')};
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;

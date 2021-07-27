@@ -54,6 +54,7 @@ const Left = styled.div`
     justify-content: center;
 
     > img {
+      position: relative;
       width: auto;
       height: 85vh;
       margin: auto;
@@ -63,7 +64,7 @@ const Left = styled.div`
 
 const SliderWrapper = styled.div`
   position: absolute;
-  top: 2.3rem;
+  top: 2.5rem;
   left: 1rem;
   width: 13.7rem;
   height: 28.2rem;
@@ -78,15 +79,37 @@ const SliderWrapper = styled.div`
     display: block;
   }
 
-  @media (max-width: 768px) {
-    position: absolute;
-    width: 17rem;
-    height: 35rem;
+  @media (min-width: 481px) and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+    left: -5rem;
+    right: 5rem;
+
+    width: 18rem;
+    height: 73vh;
     top: 3.2rem;
     left: 5rem;
 
     img {
-      height: 35rem;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 481px) {
+    margin-left: auto;
+    margin-right: auto;
+    left: -5rem;
+    right: 5rem;
+    width: 63vw;
+    height: 73vh;
+    top: 3.2rem;
+    left: 5rem;
+
+    img {
+      width: 100%;
+      height: 95%;
+      display: block;
+      object-fit: fill;
     }
   }
 `;
