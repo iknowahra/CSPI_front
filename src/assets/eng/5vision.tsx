@@ -1,7 +1,7 @@
 const visionEng = [
   {
     main: 'Minimize Failure',
-    sub: '스타트업 메이트는 모든 가치의 중심에 고객을 최우선으로 최선의 서비스로 스타트업 CEO에게 시행착오를 최소화합니다.',
+    sub: 'CSPI Vietnam는 모든 가치의 중심에 고객을 최우선으로 최선의 서비스로 스타트업 CEO에게 시행착오를 최소화합니다.',
   },
   {
     main: 'Stable Challenge',

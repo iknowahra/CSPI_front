@@ -1,5 +1,5 @@
 const focusEng = {
-  main: '스타트업 비즈니스 커스터마이징',
+  main: 'CSPI 비즈니스 커스터마이징',
   details: [
     {
       icon: 'xi-lightbulb-o',
