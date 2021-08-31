@@ -34,7 +34,6 @@ const Wrapper = styled.div`
   padding: 0 1rem;
 
   > img {
-    padding-top: 1rem;
     width: 4rem;
     object-fit: contain;
   }

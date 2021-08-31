@@ -1,9 +1,8 @@
 const aboutEng = {
   ceoLeft: {
-    title: '3 Pre-made Solutions for your Startup Business',
-    details:
-      '창의적인 아이디어를 가장 빠르게 창출할 수 있는 최고의 앱 솔루션을 제공합니다. 여러분의 스타트업을 더욱 성장시키기 위해 온 힘을 다할 것이며 STARTUP MATE 라는 이름답게 항상 동반자가 되겠습니다. 감사합니다.',
-    ceo: '앤드류 - 스타트업 메이트 대표이사',
+    title: 'Your Successful Business Partner in Vietnam',
+    details: `We've established in 2018 and accumulated our success stories in Vietnam. Based on our success, we are pretty sure to know how to enter Vietnam market. All of our staffs have always put our best efforts for you to make your success real.`,
+    ceo: 'From - All of CSPI VIETNAM staffs',
   },
   ceoRight: {
     title: 'Application Downloads',
